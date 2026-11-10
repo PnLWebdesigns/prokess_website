@@ -1,11 +1,5 @@
 {
-  "standort": "Unternehmensberatung · Luzern, Zentralschweiz",
-  "titel_zeile1": "Klarheit schaffen.",
-  "titel_zeile2": "Prozesse verbessern.",
-  "titel_rot": "Wirkung erzielen.",
-  "einleitung": "Ich unterstütze Unternehmen dabei, Strukturen zu vereinfachen, Managementsysteme wirksam zu gestalten und Veränderungen nachhaltig umzusetzen. Mit strategischem Weitblick, langjähriger Führungserfahrung und einem klaren Blick für das Machbare.",
-  "person_name": "Kristina Imhof",
-  "person_rolle": "Inhaberin und Beraterin",
+  "einleitung": "unterstütze Unternehmen dabei, Strukturen zu vereinfachen, Managementsysteme wirksam zu gestalten und Veränderungen nachhaltig umzusetzen. Mit strategischem Weitblick, langjähriger Führungserfahrung und einem klaren Blick für das Machbare.",
   "foto": "/kristina.jpg",
   "kennzahlen": [
     {
@@ -20,5 +14,11 @@
       "zahl": "2018",
       "text": "gegründet: PROKESS Consulting"
     }
-  ]
+  ],
+  "titel_zeile1": "Klarheit schaffen.",
+  "titel_zeile2": "Prozesse verbessern.",
+  "person_name": "Kristina Imhof",
+  "standort": "Unternehmensberatung · Luzern, Zentralschweiz",
+  "person_rolle": "Inhaberin und Beraterin",
+  "titel_rot": "Wirkung erzielen."
 }
