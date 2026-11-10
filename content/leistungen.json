@@ -1,0 +1,27 @@
+{
+  "titel": "Fünf Kompetenzbereiche – ein Ziel: Organisationen, die wirksam funktionieren.",
+  "leistungen": [
+    {
+      "titel": "Unternehmensentwicklung und Business Excellence",
+      "text": "Strategie in tragfähige Strukturen übersetzen und die Organisation systematisch weiterentwickeln – zum Beispiel nach dem EFQM-Modell."
+    },
+    {
+      "titel": "Qualitätsmanagement und Managementsysteme",
+      "text": "Aufbau, Integration und Weiterentwicklung von Managementsystemen, zum Beispiel nach ISO 9001 und ISO 14001 – inklusive Audits und Mandaten als externe QM-Beauftragte."
+    },
+    {
+      "titel": "Prozessmanagement, KVP und Digitalisierung",
+      "text": "Prozesse sichtbar machen, vereinfachen und digital abbilden. Kontinuierliche Verbesserung mit Lean und Kaizen im Alltag verankern."
+    },
+    {
+      "titel": "Sicherheits- und Risikomanagement",
+      "text": "Risiken systematisch erkennen, bewerten und steuern. Sicherheitsmanagementsysteme aufbauen, die gelebt werden."
+    },
+    {
+      "titel": "Projekt- und Portfoliomanagement",
+      "text": "Projekte wirksam steuern, Portfolios priorisieren und ein PMO aufbauen, das Transparenz schafft statt Bürokratie."
+    }
+  ],
+  "box_text": "Sie haben eine konkrete Fragestellung?",
+  "box_link": "Lassen Sie uns darüber sprechen"
+}

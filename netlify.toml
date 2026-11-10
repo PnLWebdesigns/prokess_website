@@ -1,0 +1,4 @@
+# Netlify baut die Website bei jeder Änderung neu.
+[build]
+  command = "node build.js"
+  publish = "dist"

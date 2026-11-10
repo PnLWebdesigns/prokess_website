@@ -1,0 +1,124 @@
+# Einstellungen für den Admin-Bereich (Decap CMS)
+
+# ------------------------------------------------------------------
+# ANMELDUNG: Diesen "backend"-Block durch den Block ersetzen,
+# den DecapBridge nach dem Anlegen der Website anzeigt.
+# ------------------------------------------------------------------
+backend:
+  name: git-gateway
+  repo: GITHUB-NAME/prokess-website
+  branch: main
+# ------------------------------------------------------------------
+
+locale: de
+publish_mode: simple
+media_folder: images/uploads
+public_folder: /images/uploads
+site_url: /
+display_url: /
+
+collections:
+  - name: inhalte
+    label: Website-Inhalte
+    editor:
+      preview: false
+    files:
+      - name: startseite
+        label: Startseite
+        file: content/startseite.json
+        fields:
+          - { name: standort, label: "Zeile über dem Titel", widget: string }
+          - { name: titel_zeile1, label: "Titel – Zeile 1", widget: string }
+          - { name: titel_zeile2, label: "Titel – Zeile 2", widget: string }
+          - { name: titel_rot, label: "Titel – rote Zeile", widget: string }
+          - { name: einleitung, label: "Einleitungstext", widget: text }
+          - { name: person_name, label: "Name", widget: string }
+          - { name: person_rolle, label: "Funktion", widget: string }
+          - { name: foto, label: "Kleines Foto", widget: image, choose_url: false }
+          - name: kennzahlen
+            label: Kennzahlen
+            label_singular: Kennzahl
+            widget: list
+            min: 1
+            max: 3
+            summary: "{{fields.zahl}} – {{fields.text}}"
+            fields:
+              - { name: zahl, label: "Zahl", widget: string }
+              - { name: text, label: "Text", widget: string }
+
+      - name: leistungen
+        label: Leistungen
+        file: content/leistungen.json
+        fields:
+          - { name: titel, label: "Überschrift", widget: string }
+          - name: leistungen
+            label: Leistungen
+            label_singular: Leistung
+            widget: list
+            min: 1
+            summary: "{{fields.titel}}"
+            fields:
+              - { name: titel, label: "Titel", widget: string }
+              - { name: text, label: "Beschreibung", widget: text }
+          - { name: box_text, label: "Dunkle Box – Text", widget: string }
+          - { name: box_link, label: "Dunkle Box – Link-Text", widget: string }
+
+      - name: arbeitsweise
+        label: Arbeitsweise
+        file: content/arbeitsweise.json
+        fields:
+          - { name: titel, label: "Überschrift", widget: string }
+          - name: schritte
+            label: "Schritte (genau 4)"
+            label_singular: Schritt
+            widget: list
+            min: 4
+            max: 4
+            summary: "{{fields.titel}}"
+            fields:
+              - { name: titel, label: "Titel", widget: string }
+              - { name: text, label: "Beschreibung", widget: string }
+          - { name: kreislauf_text, label: "Satz unter den Schritten", widget: string }
+          - name: grundsaetze
+            label: Grundsätze
+            label_singular: Grundsatz
+            widget: list
+            summary: "{{fields.titel}}"
+            fields:
+              - { name: titel, label: "Titel", widget: string }
+              - { name: text, label: "Beschreibung", widget: string }
+
+      - name: ueber-mich
+        label: Über mich
+        file: content/ueber-mich.json
+        fields:
+          - { name: titel_zeile1, label: "Überschrift – Zeile 1", widget: string }
+          - { name: titel_rot, label: "Überschrift – rote Zeile", widget: string }
+          - { name: text, label: "Text", widget: text }
+          - { name: foto, label: "Foto", widget: image, choose_url: false }
+          - name: qualifikationen
+            label: Qualifikationen
+            label_singular: Qualifikation
+            widget: list
+            field: { name: qualifikation, label: "Qualifikation", widget: string }
+          - { name: branchen, label: "Branchenerfahrung", widget: string }
+
+      - name: kontakt
+        label: Kontakt
+        file: content/kontakt.json
+        fields:
+          - { name: titel, label: "Überschrift", widget: string }
+          - { name: email, label: "E-Mail-Adresse", widget: string }
+          - { name: telefon, label: "Telefonnummer", widget: string }
+          - { name: standort, label: "Standort", widget: string }
+
+      - name: rechtliches
+        label: Impressum und Datenschutz
+        file: content/rechtliches.json
+        fields:
+          - { name: firma, label: "Firmenname", widget: string }
+          - { name: inhaberin, label: "Inhaberin", widget: string }
+          - { name: strasse, label: "Strasse und Nr.", widget: string }
+          - { name: plz_ort, label: "PLZ und Ort", widget: string }
+          - { name: land, label: "Land", widget: string }
+          - { name: datenschutz_stand, label: "Datenschutz – Stand (z. B. November 2026)", widget: string }

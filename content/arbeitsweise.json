@@ -1,0 +1,40 @@
+{
+  "titel": "Lösungen, die im Unternehmensalltag funktionieren.",
+  "schritte": [
+    {
+      "titel": "Verstehen",
+      "text": "Ausgangslage, Ziele und Abläufe gemeinsam analysieren."
+    },
+    {
+      "titel": "Vereinfachen",
+      "text": "Strukturen und Prozesse auf das Wesentliche reduzieren."
+    },
+    {
+      "titel": "Umsetzen",
+      "text": "Massnahmen konkret einführen – mit den Menschen, die damit arbeiten."
+    },
+    {
+      "titel": "Verankern",
+      "text": "Ergebnisse sichern und kontinuierlich verbessern."
+    }
+  ],
+  "kreislauf_text": "Ein Kreislauf – im Sinne der kontinuierlichen Verbesserung.",
+  "grundsaetze": [
+    {
+      "titel": "Strukturiert",
+      "text": "Klare Analyse, nachvollziehbare Schritte, messbare Ergebnisse."
+    },
+    {
+      "titel": "Pragmatisch",
+      "text": "So viel System wie nötig, so einfach wie möglich."
+    },
+    {
+      "titel": "Partnerschaftlich",
+      "text": "Gemeinsam mit Ihren Mitarbeitenden statt über ihre Köpfe hinweg."
+    },
+    {
+      "titel": "Lösungsorientiert",
+      "text": "Der Fokus liegt auf Wirkung – nicht auf Papier."
+    }
+  ]
+}

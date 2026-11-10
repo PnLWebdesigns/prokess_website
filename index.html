@@ -148,6 +148,7 @@ footer a{color:#A9A6A0}
 .brand-name{font-size:21px}
 .principles{grid-template-columns:minmax(0,1fr)}
 .card{padding:24px}.card h3{font-size:19px}
+.card h3,.h2{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere}
 }
 </style>
 </head>
@@ -171,16 +172,16 @@ footer a{color:#A9A6A0}
 <main>
 <section id="top" class="wrap hero">
 <div>
-<p class="eyebrow" style="color:var(--muted)">Unternehmensberatung · Luzern, Zentralschweiz</p>
-<h1>Klarheit schaffen.<br>Prozesse verbessern.<br><span class="accent">Wirkung erzielen.<svg class="underline" viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 12 C 70 5, 140 16, 210 9 S 280 7, 297 11" fill="none" stroke="#B0020A" stroke-width="3.5" stroke-linecap="round"/></svg></span></h1>
-<p class="lead">Ich unterstütze Unternehmen dabei, Strukturen zu vereinfachen, Managementsysteme wirksam zu gestalten und Veränderungen nachhaltig umzusetzen. Mit strategischem Weitblick, langjähriger Führungserfahrung und einem klaren Blick für das Machbare.</p>
+<p class="eyebrow" style="color:var(--muted)">{{start.standort}}</p>
+<h1>{{start.titel_zeile1}}<br>{{start.titel_zeile2}}<br><span class="accent">{{start.titel_rot}}<svg class="underline" viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 12 C 70 5, 140 16, 210 9 S 280 7, 297 11" fill="none" stroke="#B0020A" stroke-width="3.5" stroke-linecap="round"/></svg></span></h1>
+<p class="lead">{{start.einleitung}}</p>
 <div class="cta">
 <a href="#kontakt" class="btn btn-red">Gespräch vereinbaren <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 <a href="#leistungen" class="btn btn-line">Leistungen ansehen</a>
 </div>
 <div class="person">
-<img src="kristina.jpg" alt="Porträt von Kristina Imhof">
-<div><strong>Kristina Imhof</strong><span>Inhaberin und Beraterin</span></div>
+<img src="{{start.foto}}" alt="Porträt von {{start.person_name}}">
+<div><strong>{{start.person_name}}</strong><span>{{start.person_rolle}}</span></div>
 </div>
 </div>
 <div class="mark-big" aria-hidden="true">
@@ -203,46 +204,24 @@ footer a{color:#A9A6A0}
 
 <div class="stats">
 <div class="wrap rv">
-<div class="stat"><b>20+</b><span>Jahre Berufserfahrung, davon viele in Führungsfunktionen</span></div>
-<div class="stat"><b>11</b><span>Branchen – von Industrie und Bahn bis NPO</span></div>
-<div class="stat"><b>2018</b><span>gegründet: PROKESS Consulting</span></div>
-</div>
+{{#start.kennzahlen}}<div class="stat"><b>{{zahl}}</b><span>{{text}}</span></div>
+{{/start.kennzahlen}}</div>
 </div>
 
 <section id="leistungen" class="wrap sec">
 <div class="sec-head rv">
 <p class="eyebrow">Leistungen</p>
-<h2 class="h2">Fünf Kompetenzbereiche – ein Ziel: Organisationen, die wirksam funktionieren.</h2>
+<h2 class="h2">{{leistungen.titel}}</h2>
 </div>
 <div class="cards">
-<article class="card rv">
-<svg class="icon" viewBox="0 0 52 52" fill="none" stroke="#B0020A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 44 C 14 43, 15 35, 22 34 C 29 33, 30 25, 36 22 C 41 19, 43 13, 45 8"/><path d="M38 9 L 45.5 7 L 46 15"/><path d="M5 47 L 47 46.5" stroke="#17181A" stroke-width="1.6"/></svg>
-<h3>Unternehmens&shy;entwicklung und Business Excellence</h3>
-<p>Strategie in tragfähige Strukturen übersetzen und die Organisation systematisch weiterentwickeln – zum Beispiel nach dem EFQM-Modell.</p>
+{{#leistungen.leistungen}}<article class="card rv">
+<svg class="icon" viewBox="0 0 52 52" fill="none" stroke="#B0020A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{{@icon}}}</svg>
+<h3>{{titel}}</h3>
+<p>{{text}}</p>
 </article>
-<article class="card rv">
-<svg class="icon" viewBox="0 0 52 52" fill="none" stroke="#B0020A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M26 5 C 39 4.5, 47 13, 47 26 C 47.5 39, 38 47, 25.5 47 C 13 47.5, 5 38, 5.5 25 C 6 13, 14 5.5, 27 5.5" stroke="#17181A" stroke-width="1.6"/><path d="M16 26 L 23 33 L 37 18"/></svg>
-<h3>Qualitätsmanagement und Managementsysteme</h3>
-<p>Aufbau, Integration und Weiterentwicklung von Managementsystemen, zum Beispiel nach ISO 9001 und ISO 14001 – inklusive Audits und Mandaten als externe QM-Beauftragte.</p>
-</article>
-<article class="card rv">
-<svg class="icon" viewBox="0 0 52 52" fill="none" stroke="#B0020A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 22 C 12 12, 22 6, 32 8 C 38 9.5, 42 13, 44 17"/><path d="M44 9 L 44.5 17.5 L 36.5 17"/><path d="M42 30 C 40 40, 30 46, 20 44 C 14 42.5, 10 39, 8 35" stroke="#17181A" stroke-width="1.8"/><path d="M8 43 L 7.5 34.5 L 15.5 35" stroke="#17181A" stroke-width="1.8"/></svg>
-<h3>Prozessmanagement, KVP und Digitalisierung</h3>
-<p>Prozesse sichtbar machen, vereinfachen und digital abbilden. Kontinuierliche Verbesserung mit Lean und Kaizen im Alltag verankern.</p>
-</article>
-<article class="card rv">
-<svg class="icon" viewBox="0 0 52 52" fill="none" stroke="#B0020A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M26 5 C 32 8.5, 38 10, 44 10.5 C 44.5 26, 39 39, 26 47 C 13 39.5, 7.5 26.5, 8 10 C 14 9.5, 20 8, 26 5 Z" stroke="#17181A" stroke-width="1.6"/><path d="M26 17 L 26.5 29"/><path d="M26.3 35 L 26.4 36"/></svg>
-<h3>Sicherheits- und Risikomanagement</h3>
-<p>Risiken systematisch erkennen, bewerten und steuern. Sicherheitsmanagementsysteme aufbauen, die gelebt werden.</p>
-</article>
-<article class="card rv">
-<svg class="icon" viewBox="0 0 52 52" fill="none" stroke="#B0020A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 12 L 30 12.5" stroke="#17181A" stroke-width="1.8"/><path d="M7 25 L 40 25.5"/><path d="M7 38 L 22 38.3" stroke="#17181A" stroke-width="1.8"/><path d="M34 12.5 L 37 15.5 L 44 8"/></svg>
-<h3>Projekt- und Portfoliomanagement</h3>
-<p>Projekte wirksam steuern, Portfolios priorisieren und ein PMO aufbauen, das Transparenz schafft statt Bürokratie.</p>
-</article>
-<div class="card card-dark rv">
-<p>Sie haben eine konkrete Fragestellung?</p>
-<a href="#kontakt">Lassen Sie uns darüber sprechen <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+{{/leistungen.leistungen}}<div class="card card-dark rv">
+<p>{{leistungen.box_text}}</p>
+<a href="#kontakt">{{leistungen.box_link}} <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </div>
 </div>
 </section>
@@ -251,46 +230,32 @@ footer a{color:#A9A6A0}
 <div class="wrap sec">
 <div class="sec-head rv">
 <p class="eyebrow">Arbeitsweise</p>
-<h2 class="h2">Lösungen, die im Unternehmens&shy;alltag funktionieren.</h2>
+<h2 class="h2">{{arbeitsweise.titel}}</h2>
 </div>
 <div class="steps rv" id="steps">
 <div class="track" aria-hidden="true"><i id="trackFill"></i></div>
-<button type="button" class="step" data-i="0"><span class="node">01</span><span class="txt"><h3>Verstehen</h3><p>Ausgangslage, Ziele und Abläufe gemeinsam analysieren.</p></span></button>
-<button type="button" class="step" data-i="1"><span class="node">02</span><span class="txt"><h3>Vereinfachen</h3><p>Strukturen und Prozesse auf das Wesentliche reduzieren.</p></span></button>
-<button type="button" class="step" data-i="2"><span class="node">03</span><span class="txt"><h3>Umsetzen</h3><p>Massnahmen konkret einführen – mit den Menschen, die damit arbeiten.</p></span></button>
-<button type="button" class="step" data-i="3"><span class="node">04</span><span class="txt"><h3>Verankern</h3><p>Ergebnisse sichern und kontinuierlich verbessern.</p></span></button>
-</div>
-<p class="loop rv"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B0020A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v5h-5"/></svg>Ein Kreislauf – im Sinne der kontinuierlichen Verbesserung.</p>
+{{#arbeitsweise.schritte}}<button type="button" class="step"><span class="node">{{@nr}}</span><span class="txt"><h3>{{titel}}</h3><p>{{text}}</p></span></button>
+{{/arbeitsweise.schritte}}</div>
+<p class="loop rv"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B0020A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v5h-5"/></svg>{{arbeitsweise.kreislauf_text}}</p>
 <div class="principles rv">
-<div><h3>Strukturiert</h3><p>Klare Analyse, nachvollziehbare Schritte, messbare Ergebnisse.</p></div>
-<div><h3>Pragmatisch</h3><p>So viel System wie nötig, so einfach wie möglich.</p></div>
-<div><h3>Partnerschaftlich</h3><p>Gemeinsam mit Ihren Mitarbeitenden statt über ihre Köpfe hinweg.</p></div>
-<div><h3>Lösungsorientiert</h3><p>Der Fokus liegt auf Wirkung – nicht auf Papier.</p></div>
-</div>
+{{#arbeitsweise.grundsaetze}}<div><h3>{{titel}}</h3><p>{{text}}</p></div>
+{{/arbeitsweise.grundsaetze}}</div>
 </div>
 </section>
 
 <section id="ueber-mich" class="wrap sec">
 <div class="about">
-<img class="rv" src="kristina.jpg" alt="Kristina Imhof, Inhaberin von PROKESS Consulting" loading="lazy">
+<img class="rv" src="{{ueber.foto}}" alt="Porträt von {{start.person_name}}" loading="lazy">
 <div class="rv">
 <p class="eyebrow">Über mich</p>
-<h2 class="h2">Strategisch denken.<br><span style="color:var(--red)">Praktisch umsetzen.</span></h2>
-<p class="lead" style="margin:28px 0 0">Ich bin Kristina Imhof. Seit über 20 Jahren gestalte ich Organisationen mit – in Führungsfunktionen bei Unternehmen wie ABB, Läderach, Ampegon und der Zentralbahn. Mit PROKESS Consulting gebe ich diese Erfahrung an Unternehmen unterschiedlichster Grösse und Branche weiter.</p>
+<h2 class="h2">{{ueber.titel_zeile1}}<br><span style="color:var(--red)">{{ueber.titel_rot}}</span></h2>
+<p class="lead" style="margin:28px 0 0">{{ueber.text}}</p>
 <h3>Qualifikationen (Auswahl)</h3>
 <div class="chips">
-<span>Dipl. Betriebswirtin (FH)</span>
-<span>Qualitäts- und Prozessmanagerin SAQ</span>
-<span>Spezialistin Arbeitssicherheit und Gesundheitsschutz</span>
-<span>Executive Excellence SEF</span>
-<span>Lean Six Sigma Green Belt</span>
-<span>KAIZEN Coach</span>
-<span>Lead Auditor</span>
-<span>Project Management (RIT)</span>
-<span>Umweltmanagement-Fachkraft TÜV</span>
-</div>
+{{#ueber.qualifikationen}}<span>{{.}}</span>
+{{/ueber.qualifikationen}}</div>
 <h3>Branchenerfahrung</h3>
-<p style="margin:0;font-size:16px;line-height:1.8;color:var(--text)">Industrie · Bahn · Wirtschaftsprüfung · Treuhand · Beratung · Broadcast · Medizintechnik · Textil · Wissenschaft · NPO · Lebensmittel</p>
+<p style="margin:0;font-size:16px;line-height:1.8;color:var(--text)">{{ueber.branchen}}</p>
 </div>
 </div>
 </section>
@@ -299,11 +264,11 @@ footer a{color:#A9A6A0}
 <div class="wrap sec contact-grid">
 <div class="rv">
 <p class="eyebrow">Kontakt</p>
-<h2 class="h2">Ich freue mich auf Ihre Nachricht.</h2>
+<h2 class="h2">{{kontakt.titel}}</h2>
 <div class="contact-list">
-<a href="mailto:prokess-consulting@outlook.com"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A0A4" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>prokess-consulting@outlook.com</a>
-<a href="tel:+41787640717"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A0A4" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+41 78 764 07 17</a>
-<span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A9A6A0" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Luzern, Zentralschweiz</span>
+<a href="mailto:{{kontakt.email}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A0A4" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>{{kontakt.email}}</a>
+<a href="tel:{{kontakt.telefon_link}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A0A4" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>{{kontakt.telefon}}</a>
+<span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A9A6A0" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>{{kontakt.standort}}</span>
 </div>
 </div>
 <form class="rv" name="kontakt" method="POST" action="/danke" data-netlify="true" netlify-honeypot="bot-field" aria-label="Kontaktformular">
@@ -317,7 +282,7 @@ footer a{color:#A9A6A0}
 </div>
 <footer>
 <div class="wrap">
-<span>© 2026 PROKESS Consulting</span>
+<span>© {{jahr}} {{recht.firma}}</span>
 <span style="display:flex;gap:24px"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></span>
 </div>
 </footer>
