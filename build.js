@@ -8,7 +8,7 @@ const path = require('path');
 const ROOT = __dirname;
 const OUT = path.join(ROOT, 'dist');
 const TEMPLATES = ['index.html', 'impressum.html', 'datenschutz.html'];
-const COPY = ['danke.html', '404.html', 'kristina.jpg', 'fonts', 'images', 'admin'];
+const COPY = ['style.css', 'danke.html', '404.html', 'kristina.jpg', 'fonts', 'images', 'admin'];
 
 // Symbole der Leistungen (werden der Reihe nach vergeben)
 const ICONS = [
